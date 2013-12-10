@@ -6,7 +6,6 @@ applications:
   url: JavaUpload-${random-word}.${target-base} #deprecated, kept for temporary compatibility
   host: JavaUpload-${random-word} #Hostname for app routing. Unique to domain
   domain: ${target-base} #Bluemix Parent Domain Name
-  buildpack:  https://github.com/cloudfoundry/java-buildback  #Explicit Declaration for Cloud Foundry Java Buildpack
   path: . #Path to the application to be pushed
   services:
     java-pg: #Identifier for PostgreSQL Bound Service instance
