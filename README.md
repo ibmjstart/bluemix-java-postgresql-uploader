@@ -51,7 +51,7 @@ If you want to use Eclipse to work on it, there are two ways you can get the sou
 
 ## Deploying the App to BlueMix and Binding the PostgreSQL Service##
 
-In the terminal, go in the directory of the app. The application is wrapped in a WAR file.
+In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You can export the project from Eclipse to a WAR file, or download the WAR file for this sample here: https://github.com/ibmjstart/bluemix-java-postgresql-upload/releases.  In the terminal, go in the directory of the app. 
 
 1. Login to Bluemix.
  * `$ cf login -a https://api.ng.bluemix.net`
