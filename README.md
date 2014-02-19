@@ -18,9 +18,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## Prerequisites ##
 
-Before we begin, we first need to install the command line tool that will be used to upload and manage your application. Cloud Foundry uses a tool called [**cf**](https://github.com/cloudfoundry/cli).  Make sure you are using v6 of the cf cli by using
+Before we begin, we first need to install the command line tool that will be used to upload and manage your application. Cloud Foundry uses a tool called [**cf**](https://github.com/cloudfoundry/cli/releases).  If you've previously installed an older version of the cf tool, make sure you are now using v6 of the cf cli via
 
-	cf -v
+    cf -v
 	
 to see the version.
         
@@ -65,7 +65,7 @@ In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You
    |------------|----------------------------------------------------|
    | *example:* | `$ cf create-service postgresql 100 postgresql_JPU`|
 
-3. From the directory you placed your WAR file in, push the app with a -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its host; for example: this would be https://jpu.ng.bluemix.net.
+3. From the directory you placed your WAR file in, push the app with the -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its hostname; for instance the example below would be hosted at http://jpu.ng.bluemix.net.
 
    | *usage:*   | `$ cf push APP [--no-manifest] [--no-start] [-p PATH]`       |
    |------------|-----------------------------------------------------------------|
