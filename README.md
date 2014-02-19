@@ -21,8 +21,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 Before we begin, we first need to install the [**cf**](https://github.com/cloudfoundry/cli/releases) command line tool that will be used to upload and manage your application. If you've previously installed an older version of the cf tool, make sure you are now using v6 of cf by passing it the -v flag:
 
     cf -v
-	
-to see the version.
         
 ## Download the App ##
 
