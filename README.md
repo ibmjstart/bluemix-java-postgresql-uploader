@@ -18,17 +18,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## Prerequisites ##
 
-Before we begin, we first need to install the command line tool that will be used to upload and manage your application. Cloud Foundry uses a tool called [**cf**](https://github.com/cloudfoundry/cf). This tool is written in Ruby, so you must have Ruby installed. If you are running on Windows, you can install Ruby from [this](http://rubyinstaller.org/downloads/) website. 
+Before we begin, we first need to install the command line tool that will be used to upload and manage your application. Cloud Foundry uses a tool called [**cf**](https://github.com/cloudfoundry/cli).  Make sure you are using v6 of the cf cli by using
 
-For Linux systems, consult your documentation for how to install the **ruby** package - for Ubuntu the command:
-
-	apt-get install ruby
-
-should work for you.
-
-Once Ruby is installed, cf can be installed by using the **gem install** command:
-        
-	gem install cf
+	cf -v
+	
+to see the version.
         
 ## Download the App ##
 
@@ -55,19 +49,20 @@ If you want to use Eclipse to work on it, there are two ways you can get the sou
 	5. Scroll down to the "Web" section, expand that section and click WAR File then click Next.
 	6. Click next and then Finish and the project should be imported into Eclipse
 
-## Deploying the App ##
+## Deploying the App to BlueMix and Binding the PostgreSQL Service##
 
-In the terminal, go in the directory of the app. The application is wrapped in a WAR file. You can directly deploy/push the WAR file using push command:
+In the terminal, go in the directory of the app. The application is wrapped in a WAR file.
 
-	cf push
-
-Just follow the instructions on the screen. You can select the default settings for deploying the app, i.e. for URL, memory reservations (512 Recommended), number of instances. You need to bind the PostgreSQL service to your application. 
-
-### Binding a Service to Your App ###
-
-For the app to function correctly, you must create the service instance and bind the service instance while deploying the app. The **cf push** command will ask, "Create services for application?" Answer yes, then you will be presented with a list of services. Choose PostgreSQL from this list. Below, you can see some screenshots of what this should look like when deploying from the command line.
-
-After the application is deployed using **cf push**, you can check the status of the app using the following command: **cf apps**. If the status is RUNNING, you can hit the URL <pre><b>http://&lt;your_app_route_&gt;/home.jsp</b></pre> in the browser and see if the application is running.  Simply, upload a line-separated file of text (e.g. tweets), and it will add each line to Postgres.
+1. Login to Bluemix.
+ * `$ cf login -a https://api.ng.bluemix.net`
+2. Create an instance of the postgreSQL service, giving it a unique name in the last arguement.
+ * `$ cf create-service postgresql 100 unique_service_name`
+3. From the directory you placed your WAR file in, push the app with a -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its path.
+ * `$ cf push unique_app_name --no-manifest --no-start -p /path/to/PostgreSQLUpload.war`
+4. Bind the postgreSQL service to the new app
+ * `$ cf bind-service unique_app_name unique_service_name`
+5. Start the app
+ * `$ cf start unique_app_name`
 
 
 ## Troubleshooting ##
