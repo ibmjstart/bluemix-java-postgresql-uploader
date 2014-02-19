@@ -65,7 +65,7 @@ In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You
    |------------|----------------------------------------------------|
    | *example:* | `$ cf create-service postgresql 100 postgresql_JPU`|
 
-3. From the directory you placed your WAR file in, push the app with a -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its path.
+3. From the directory you placed your WAR file in, push the app with a -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its host; for example: this would be https://jpu.ng.bluemix.net.
 
    | *usage:*   | `$ cf push APP [--no-manifest] [--no-start] [-p PATH]`       |
    |------------|-----------------------------------------------------------------|
@@ -85,12 +85,3 @@ In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You
    |------------|-----------------|
    | *example:* | `$ cf start jpu`|
 
-
-
-
-
-
-## Troubleshooting ##
-
--   Sometimes your app may not work as expected and debugging needs to be done. The cf command line tool can be used to assist with debugging. With the cf you can check your app's logs by typing the command **cf logs [app_name]** 
--   From time to time your app may stop working, this means it could require a restart. To do this you must first stop it by typing **cf stop**. Once the app has been stopped, you can type **cf start** and if there are no other problems your app should start. 
