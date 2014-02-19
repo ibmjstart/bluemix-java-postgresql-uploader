@@ -18,7 +18,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 ## Prerequisites ##
 
-Before we begin, we first need to install the command line tool that will be used to upload and manage your application. Cloud Foundry uses a tool called [**cf**](https://github.com/cloudfoundry/cli/releases).  If you've previously installed an older version of the cf tool, make sure you are now using v6 of the cf cli via
+Before we begin, we first need to install the [**cf**](https://github.com/cloudfoundry/cli/releases) command line tool that will be used to upload and manage your application. If you've previously installed an older version of the cf tool, make sure you are now using v6 of cf by passing it the -v flag:
 
     cf -v
 	
