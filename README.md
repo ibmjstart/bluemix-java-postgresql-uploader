@@ -54,29 +54,40 @@ If you want to use Eclipse to work on it, there are two ways you can get the sou
 In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You can export the project from Eclipse to a WAR file, or download the WAR file for this sample here: https://github.com/ibmjstart/bluemix-java-postgresql-upload/releases.  In the terminal, go in the directory of the app. 
 
 1. Login to Bluemix.
- * `$ cf login -a https://api.ng.bluemix.net`
+
+   | *usage:*   | `$ cf login [-a API_URL] [-o ORG] [-s SPACE]`|
+   |------------|----------------------------------------------|
+   | *example:* | `$ cf login -a https://api.ng.bluemix.net`   |
+
 2. Create an instance of the postgreSQL service, giving it a unique name in the last arguement.
- * `$ cf create-service postgresql 100 unique_service_instance_name`
+
+   | *usage:*   | `$ cf create-service SERVICE PLAN SERVICE_INSTANCE`|
+   |------------|----------------------------------------------------|
+   | *example:* | `$ cf create-service postgresql 100 postgresql_JPU`|
+
 3. From the directory you placed your WAR file in, push the app with a -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its path.
- * `$ cf push unique_app_name --no-manifest --no-start -p /path/to/PostgreSQLUpload.war`
-4. Bind the postgreSQL service instance to the new app
- * `$ cf bind-service unique_app_name unique_service_instance_name`
-5. Start the app
- * `$ cf start unique_app_name`
 
-*Note* : that you must add the flag -p to specify the WAR file you want to upload.
-
-*Note* : Service instance names must be unique to your organization.
-
-As an example invocation... 
-
- * `$ cf login -a https://api.ng.bluemix.net`
- * `$ cf create-service postgresql 100 postgresql_JPU`
- * `$ cf push jpu --no-manifest --no-start -p PostgreSQLUpload.war`
- * `$ cf bind-service jpu postgresql_JPU`
- * `$ cf start jpu`
+   | *usage:*   | `$ cf push APP [--no-manifest] [--no-start] [-p PATH]`       |
+   |------------|-----------------------------------------------------------------|
+   | *example:* | `$ cf push jpu --no-manifest --no-start -p PostgreSQLUpload.war`|
 
 *Note* : `-p PostgreSQLUpload.war` assumes you are running these commands from within the same directory that this file resides.
+
+4. Bind the postgreSQL service instance to the new app
+
+   | *usage:*   | `$ cf bind-service APP SERVICE_INSTANCE`|
+   |------------|-----------------------------------------|
+   | *example:* | `$ cf bind-service jpu postgresql_JPU`|
+
+5. Start the app
+
+   | *usage:*   | `$ cf start APP`|
+   |------------|-----------------|
+   | *example:* | `$ cf start jpu`|
+
+
+
+
 
 
 ## Troubleshooting ##
