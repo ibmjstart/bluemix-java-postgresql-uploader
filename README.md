@@ -56,7 +56,7 @@ In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You
 1. Login to Bluemix.
  * `$ cf login -a https://api.ng.bluemix.net`
 2. Create an instance of the postgreSQL service, giving it a unique name in the last arguement.
- * `$ cf create-service postgresql 100 unique_service_name`
+ * `$ cf create-service postgresql 100 unique_service_instance_name`
 3. From the directory you placed your WAR file in, push the app with a -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its path.
  * `$ cf push unique_app_name --no-manifest --no-start -p /path/to/PostgreSQLUpload.war`
 4. Bind the postgreSQL service instance to the new app
