@@ -76,7 +76,7 @@ As an example invocation...
  * `$ cf bind-service jpu postgresql_JPU`
  * `$ cf start jpu`
 
-*Note* : * '-p PostgreSQLUpload.war' assumes you are running these commands from within the same directory that this file resides.
+*Note* : `-p PostgreSQLUpload.war` assumes you are running these commands from within the same directory that this file resides.
 
 
 ## Troubleshooting ##
