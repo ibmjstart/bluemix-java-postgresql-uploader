@@ -9,13 +9,6 @@ This is a Java app that uses the following cloud services:
 This app demonstrates how to connect to a PostgreSQL database on BlueMix from a Java app. 
 Simply upload a line-separated file of text (e.g. tweets), and it will add each line to Postgres.
 
-## License ##
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-     http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
 ## Prerequisites ##
 
 Before we begin, we first need to install the [**cf**](https://github.com/cloudfoundry/cli/releases) command line tool that will be used to upload and manage your application. If you've previously installed an older version of the cf tool, make sure you are now using v6 of cf by passing it the -v flag:
@@ -83,3 +76,9 @@ In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You
    |------------|-----------------|
    | *example:* | `$ cf start jpu`|
 
+## License ##
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
