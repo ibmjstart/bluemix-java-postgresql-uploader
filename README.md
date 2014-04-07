@@ -59,14 +59,18 @@ From the command line, navigate to the directory of the app and run the followin
 
 To view and edit the application, simply import the project into Eclipse.  If you don't have an Eclipse instance with Java EE support, you may download it from https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/keplersr2
 
-Once you have it running, you can Import the WAR file as a new project via
+Once you Eclipse running, you can Import the WAR file as a new project via
   1. File->Import...
   2. Scroll down to the "Web" section, expand that section and click WAR File then click Next.
   3. Deselect the 'Add project to an EAR' checkbox
   4. Click next and then Finish and the project should be imported into Eclipse
 
 Now that you have the project in Eclipse, you can edit the source and re-deploy to BlueMix by either:
+  
   a.  Exporting your updated project as a WAR file and push it from the command line as before; or
+  
+ -OR- 
+  
   b.  Installing the [Eclipse Cloud Foundry Plugin](https://marketplace.eclipse.org/content/cloud-foundry-integration-eclipse), defining the BlueMix endpoint (https://api.ng.bluemix.net), and deploying your application right from Eclipse.
 
 ## License ##
