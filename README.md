@@ -15,36 +15,13 @@ Before we begin, we first need to install the [**cf**](https://github.com/cloudf
 
     cf -v
         
-## Download the App ##
+## Download ##
 
-The source for this app is at GitHub so, for example, if you are using the command line you can clone the repository like this:
+Download the latest WAR file 'release' from https://github.com/ibmjstart/bluemix-java-postgresql-upload/releases
 
-	git clone https://github.com/ibmjstart/bluemix-java-postgresql-upload.git
-		
-If you want to use Eclipse to work on it, there are two different ways you can get the source into Eclipse:
+## Deploy to BlueMix and Binding the PostgreSQL Service via the Command Line Interface ##
 
-Option A. Import the Eclipse project by following these instructions:
-  1. Start by cloning the repository, as described above
-  2. Open Eclipse
-  3. Select File->Import
-  4. Under the header labeled "General", click "Existing Projects Into Workspace" and click Next
-  5. Click "Browse" next to the first text field, and navigate to the cloned repository and find the folder labeled "app" and click ok.
-  6. Under Projects you should now see a project called "PostgreSQLUpload", make sure the checkbox next to the "PostgreSQLUpload" project is checked and then click Finish
-  7. You should now see the "PostgreSQLUpload" project in your list of projects in Eclipse.
-
- -OR-
- 
-Option B. Import the WAR File
-  1. Navigate to https://github.com/ibmjstart/bluemix-java-postgresql-upload/releases
-  2. Click the green button labeled "PostgreSQLUpload.war" and that will download the WAR file.
-  3. Open Eclipse
-  4. Then File->Import
-  5. Scroll down to the "Web" section, expand that section and click WAR File then click Next.
-  6. Click next and then Finish and the project should be imported into Eclipse
-
-## Deploying the App to BlueMix and Binding the PostgreSQL Service##
-
-In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You can export the project from Eclipse to a WAR file, or download the WAR file for this sample here: https://github.com/ibmjstart/bluemix-java-postgresql-upload/releases.  In the terminal, go in the directory of the app. 
+From the command line, navigate to the directory of the app and run the following commands.
 
 1. Login to Bluemix.
 
@@ -61,7 +38,7 @@ In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You
 3. From the directory you placed your WAR file in, push the app with the -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its hostname; for instance the example below would be hosted at http://jpu.ng.bluemix.net.
 
    | *usage:*   | `$ cf push APP [--no-manifest] [--no-start] [-p PATH]`       |
-   |------------|-----------------------------------------------------------------|
+   |------------|:----------------------------------------------------------------|
    | *example:* | `$ cf push jpu --no-manifest --no-start -p PostgreSQLUpload.war`|
 
 *Note* : `-p PostgreSQLUpload.war` assumes you are running these commands from within the same directory that this file resides.
@@ -77,6 +54,20 @@ In order to deploy your app on BlueMix, it has to be wrapped in a WAR file.  You
    | *usage:*   | `$ cf start APP`|
    |------------|-----------------|
    | *example:* | `$ cf start jpu`|
+   
+## Import the App into Eclipse ##
+
+To view and edit the application, simply import the project into Eclipse.  If you don't have an Eclipse instance with Java EE support, you may download it from https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/keplersr2
+
+Once you have it running, you can Import the WAR file as a new project via
+  1. File->Import...
+  2. Scroll down to the "Web" section, expand that section and click WAR File then click Next.
+  3. Deselect the 'Add project to an EAR' checkbox
+  4. Click next and then Finish and the project should be imported into Eclipse
+
+Now that you have the project in Eclipse, you can edit the source and re-deploy to BlueMix by either:
+  a.  Exporting your updated project as a WAR file and push it from the command line as before; or
+  b.  Installing the [Eclipse Cloud Foundry Plugin](https://marketplace.eclipse.org/content/cloud-foundry-integration-eclipse), defining the BlueMix endpoint (https://api.ng.bluemix.net), and deploying your application right from Eclipse.
 
 ## License ##
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
