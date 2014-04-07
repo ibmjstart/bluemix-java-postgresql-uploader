@@ -41,7 +41,7 @@ From the command line, navigate to the directory of the app and run the followin
    |------------|:----------------------------------------------------------------|
    | *example:* | `$ cf push jpu --no-manifest --no-start -p PostgreSQLUpload.war`|
 
-*Note* : `-p PostgreSQLUpload.war` assumes you are running these commands from within the same directory that this file resides.
+ *Note* : `-p PostgreSQLUpload.war` assumes you are running these commands from within the same directory that this file resides.
 
 4. Bind the postgreSQL service instance to the new app
 
