@@ -29,7 +29,7 @@ From the command line, navigate to the directory of the app and run the followin
    |------------|----------------------------------------------|
    | *example:* | `$ cf login -a https://api.ng.bluemix.net`   |
 
-2. Create an instance of the postgreSQL service, giving it a unique name in the last arguement.
+2. Create an instance of the PostgreSQL service, giving it a unique name in the last argument.  The application is written to assume that the service instance name will begin with "postgresql".
 
    | *usage:*   | `$ cf create-service SERVICE PLAN SERVICE_INSTANCE`|
    |------------|----------------------------------------------------|
