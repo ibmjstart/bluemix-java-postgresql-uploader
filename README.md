@@ -21,9 +21,9 @@ The source for this app is at GitHub so, for example, if you are using the comma
 
 	git clone https://github.com/ibmjstart/bluemix-java-postgresql-upload.git
 		
-If you want to use Eclipse to work on it, there are two ways you can get the source into Eclipse:
+If you want to use Eclipse to work on it, there are two different ways you can get the source into Eclipse:
 
-1. Import the Eclipse project by following these instructions:
+Option A. Import the Eclipse project by following these instructions:
 	1. Start by cloning the repository, as described above
 	2. Open Eclipse
 	3. Select File->Import
@@ -32,7 +32,9 @@ If you want to use Eclipse to work on it, there are two ways you can get the sou
 	6. Under Projects you should now see a project called "PostgreSQLUpload", make sure the checkbox next to the "PostgreSQLUpload" project is checked and then click Finish
 	7. You should now see the "PostgreSQLUpload" project in your list of projects in Eclipse.
 
-2. Import the WAR File
+ -OR-
+ 
+Option B. Import the WAR File
 	1. Navigate to https://github.com/ibmjstart/bluemix-java-postgresql-upload/releases
 	2. Click the green button labeled "PostgreSQLUpload.war" and that will download the WAR file.
 	3. Open Eclipse
