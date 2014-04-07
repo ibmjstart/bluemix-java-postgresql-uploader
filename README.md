@@ -7,7 +7,7 @@ This is a Java app that uses the following cloud services:
 - PostgreSQL Database
 
 This app demonstrates how to connect to a PostgreSQL database on BlueMix from a Java app. 
-Simply upload a line-separated file of text (e.g. tweets), and it will add each line to Postgres.
+Simply upload a line-separated file of text (e.g. tweets), and it will add each line to PostgreSQL database.
 
 ## Prerequisites ##
 
