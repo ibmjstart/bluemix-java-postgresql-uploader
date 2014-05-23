@@ -39,7 +39,7 @@ From the command line, navigate to the directory of the app and run the followin
 
    | *usage:*   | `$ cf push APP [--no-manifest] [--no-start] [-p PATH]`       |
    |------------|:----------------------------------------------------------------|
-   | *example:* | `$ cf push jpu-<YOU-NAME> --no-manifest --no-start -p PostgreSQLUpload.war`|
+   | *example:* | `$ cf push jpu-<YOU-NAME> -b https://github.com/cloudfoundry/java-buildpack --no-manifest --no-start -p PostgreSQLUpload.war`|
 
  *Note* : `-p PostgreSQLUpload.war` assumes you are running these commands from within the same directory that this file resides.
 
