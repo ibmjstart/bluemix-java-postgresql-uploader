@@ -53,7 +53,7 @@ From the command line, navigate to the directory of the app and run the followin
 
    | *usage:*   | `$ cf start APP`|
    |------------|-----------------|
-   | *example:* | `$ cf start jpu`|
+   | *example:* | `$ cf start jpu-<YOU-NAME>`|
    
 ## Import the App into Eclipse ##
 
