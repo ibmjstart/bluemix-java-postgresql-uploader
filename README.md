@@ -47,7 +47,7 @@ From the command line, navigate to the directory of the app and run the followin
 
    | *usage:*   | `$ cf bind-service APP SERVICE_INSTANCE`|
    |------------|-----------------------------------------|
-   | *example:* | `$ cf bind-service jpu postgresql_JPU`|
+   | *example:* | `$ cf bind-service jpu-<YOU-NAME> postgresql_JPU`|
 
 5. Start the app
 
