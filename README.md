@@ -26,16 +26,16 @@ From the command line, navigate to the directory of the app and run the followin
 1. Login to Bluemix.
 
    | *usage:*   | `$ cf login [-a API_URL] [-o ORG] [-s SPACE]`|
-   |------------|----------------------------------------------|
+   |------------|:---------------------------------------------|
    | *example:* | `$ cf login -a https://api.ng.bluemix.net`   |
 
 2. Create an instance of the PostgreSQL service, giving it a unique name in the last argument.  The application is written to assume that the service instance name will begin with "postgresql".
 
    | *usage:*   | `$ cf create-service SERVICE PLAN SERVICE_INSTANCE`|
-   |------------|----------------------------------------------------|
+   |------------|:---------------------------------------------------|
    | *example:* | `$ cf create-service postgresql 100 postgresql_JPU`|
 
-3. From the directory you placed your WAR file in, push the app with the -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its hostname; for instance, if you replace <YOUR-NAME> with the username 'user1' then the example below would be hosted at http://jpu-user1.ng.bluemix.net.
+3. From the directory you placed your WAR file in, push the app with the -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its hostname; for instance, if you replace `<YOUR-NAME>` with 'user1' then the example below would be hosted at http://jpu-user1.ng.bluemix.net.
 
    | *usage:*   | `$ cf push APP [--no-manifest] [--no-start] [-p PATH]`       |
    |------------|:----------------------------------------------------------------|
@@ -46,13 +46,13 @@ From the command line, navigate to the directory of the app and run the followin
 4. Bind the postgreSQL service instance to the new app
 
    | *usage:*   | `$ cf bind-service APP SERVICE_INSTANCE`|
-   |------------|-----------------------------------------|
+   |------------|:----------------------------------------|
    | *example:* | `$ cf bind-service jpu-<YOUR-NAME> postgresql_JPU`|
 
 5. Start the app
 
    | *usage:*   | `$ cf start APP`|
-   |------------|-----------------|
+   |------------|:----------------|
    | *example:* | `$ cf start jpu-<YOUR-NAME>`|
    
 ## Import the App into Eclipse ##
