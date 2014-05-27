@@ -39,7 +39,7 @@ From the command line, navigate to the directory of the app and run the followin
 
    | *usage:*   | `$ cf push APP [--no-manifest] [--no-start] [-p PATH]`       |
    |------------|:----------------------------------------------------------------|
-   | *example:* | `$ cf push jpu --no-manifest --no-start -p PostgreSQLUpload.war`|
+   | *example:* | `$ cf push jpu-<YOU-NAME> -b https://github.com/cloudfoundry/java-buildpack --no-manifest --no-start -p PostgreSQLUpload.war`|
 
  *Note* : `-p PostgreSQLUpload.war` assumes you are running these commands from within the same directory that this file resides.
 
@@ -47,13 +47,13 @@ From the command line, navigate to the directory of the app and run the followin
 
    | *usage:*   | `$ cf bind-service APP SERVICE_INSTANCE`|
    |------------|-----------------------------------------|
-   | *example:* | `$ cf bind-service jpu postgresql_JPU`|
+   | *example:* | `$ cf bind-service jpu-<YOU-NAME> postgresql_JPU`|
 
 5. Start the app
 
    | *usage:*   | `$ cf start APP`|
    |------------|-----------------|
-   | *example:* | `$ cf start jpu`|
+   | *example:* | `$ cf start jpu-<YOU-NAME>`|
    
 ## Import the App into Eclipse ##
 
