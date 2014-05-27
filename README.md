@@ -35,11 +35,11 @@ From the command line, navigate to the directory of the app and run the followin
    |------------|----------------------------------------------------|
    | *example:* | `$ cf create-service postgresql 100 postgresql_JPU`|
 
-3. From the directory you placed your WAR file in, push the app with the -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its hostname; for instance the example below would be hosted at http://jpu.ng.bluemix.net.
+3. From the directory you placed your WAR file in, push the app with the -p flag to specify the WAR file path and the --no-start option so we can bind our required service before starting our app.  Give your app a unique app name to be used as its hostname; for instance, if you replace <YOUR-NAME> with the username 'user1' then the example below would be hosted at http://jpu-user1.ng.bluemix.net.
 
    | *usage:*   | `$ cf push APP [--no-manifest] [--no-start] [-p PATH]`       |
    |------------|:----------------------------------------------------------------|
-   | *example:* | `$ cf push jpu-<YOU-NAME> -b https://github.com/cloudfoundry/java-buildpack --no-manifest --no-start -p PostgreSQLUpload.war`|
+   | *example:* | `$ cf push jpu-<YOUR-NAME> -b https://github.com/cloudfoundry/java-buildpack --no-manifest --no-start -p PostgreSQLUpload.war`|
 
  *Note* : `-p PostgreSQLUpload.war` assumes you are running these commands from within the same directory that this file resides.
 
@@ -47,13 +47,13 @@ From the command line, navigate to the directory of the app and run the followin
 
    | *usage:*   | `$ cf bind-service APP SERVICE_INSTANCE`|
    |------------|-----------------------------------------|
-   | *example:* | `$ cf bind-service jpu-<YOU-NAME> postgresql_JPU`|
+   | *example:* | `$ cf bind-service jpu-<YOUR-NAME> postgresql_JPU`|
 
 5. Start the app
 
    | *usage:*   | `$ cf start APP`|
    |------------|-----------------|
-   | *example:* | `$ cf start jpu-<YOU-NAME>`|
+   | *example:* | `$ cf start jpu-<YOUR-NAME>`|
    
 ## Import the App into Eclipse ##
 
