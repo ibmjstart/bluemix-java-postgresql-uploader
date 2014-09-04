@@ -72,13 +72,16 @@ with 'user1' then the example below would be hosted at http://jeu-user1.mybluemi
 
 To view and edit the application, simply import the project into Eclipse.  If you don't have an Eclipse instance with Java EE support, you may download it from http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar
 
-### Download the Source Code ###
+### Download the War File Release ###
 
 Once you have Eclipse running, you can Import the WAR file as a new project via
-  1. File->Import...
-  2. Scroll down to the "Web" section, expand that section and click WAR File then click Next.
-  3. Deselect the 'Add project to an EAR' checkbox
-  4. Click next and then Finish and the project should be imported into Eclipse
+  1. At the top of the github repository, go to releases and download the latest war file (the green button). https://github.com/ibmjstart/bluemix-java-postgresql-upload/releases
+  2. File->Import...
+  3. Scroll down to the "Web" section, expand that section and click WAR File then click Next.
+  4. Select the war file that you downloaded. Under target runtime, select IBM Bluemix. If the IBM Bluemix
+  runtime is not present, hit `New...` IBM-> IBM Bluemix.
+  5. Deselect the 'Add project to an EAR' checkbox
+  6. Click next and then Finish and the project should be imported into Eclipse
 
 ### Modify the Source Code and Deploy to Bluemix ###
 
