@@ -56,9 +56,9 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class PostgreSQLClient {
+public class ElephantSQLClient {
 	
-	public PostgreSQLClient() {
+	public ElephantSQLClient() {
 		try {
 			createTable();
 		} catch (Exception e) {
@@ -67,9 +67,9 @@ public class PostgreSQLClient {
 	}
 		
 	/**
-	 * Grab text from PostgreSQL
+	 * Grab text from ElephantSQL
 	 * 
-	 * @return List of Strings of text from PostgreSQL
+	 * @return List of Strings of text from ElephantSQL
 	 * @throws Exception 
 	 */
 	public List<String> getResults() throws Exception {
@@ -86,7 +86,7 @@ public class PostgreSQLClient {
 			
 			while (results.next()) {
 				texts.add(results.getString("text"));
-			}
+			} 
 			
 			return texts;
 		} finally {
@@ -105,7 +105,7 @@ public class PostgreSQLClient {
 	}
 	
 	/**
-	 * Insert text into PostgreSQL
+	 * Insert text into ElephantSQL
 	 * 
 	 * param posts List of Strings of text to insert
 	 * @return number of rows affected
@@ -149,7 +149,7 @@ public class PostgreSQLClient {
 	}
 	
 	/**
-	 * Delete all rows from PostgreSQL
+	 * Delete all rows from ElephantSQL
 	 * @return number of rows affected
 	 * @throws Exception 
 	 */
@@ -181,7 +181,7 @@ public class PostgreSQLClient {
 			JSONObject vcap = (JSONObject) parser.parse(env.get("VCAP_SERVICES"));
 			JSONObject service = null;
 			
-			// We don't know exactly what the service is called, but it will contain "postgresql"
+			// We don't know exactly what the service is called, but it will contain "elephantsql"
 			for (Object key : vcap.keySet()) {
 				String keyStr = (String) key;
 				if (keyStr.toLowerCase().contains("elephantsql")) {
@@ -200,7 +200,7 @@ public class PostgreSQLClient {
 			}
 		}
 		
-		throw new Exception("No PostgreSQL service URL found. Make sure you have bound the correct services to your app.");
+		throw new Exception("No ElephantSQL service URL found. Make sure you have bound the correct services to your app.");
 	}
 	
 	/**

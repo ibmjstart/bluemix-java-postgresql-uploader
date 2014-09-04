@@ -21,7 +21,7 @@
         <a href="/delete" class="btn btn-danger" title="Clear All">X</a>
       </div>
       <div class="text-center">
-        <h1><a href="/">PostgreSQL Upload</a></h1>
+        <h1><a href="/">ElephantSQL Upload</a></h1>
         <p>
           <form action="/upload" method="POST" enctype="multipart/form-data">
             <input type="file" name="file" /><br>

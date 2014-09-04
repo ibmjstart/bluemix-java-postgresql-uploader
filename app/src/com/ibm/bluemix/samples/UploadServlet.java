@@ -60,7 +60,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 @SuppressWarnings("serial")
 public class UploadServlet extends HttpServlet {
 	
-	private PostgreSQLClient db = new PostgreSQLClient();
+	private ElephantSQLClient db = new ElephantSQLClient();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	System.out.println("Upload Servlet");

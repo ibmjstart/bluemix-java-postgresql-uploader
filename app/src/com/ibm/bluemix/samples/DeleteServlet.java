@@ -52,7 +52,7 @@ import javax.servlet.http.HttpServletResponse;
 @SuppressWarnings("serial")
 public class DeleteServlet extends HttpServlet {
 
-	private PostgreSQLClient db = new PostgreSQLClient();
+	private ElephantSQLClient db = new ElephantSQLClient();
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	System.out.println("Delete Servlet");
