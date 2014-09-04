@@ -74,23 +74,11 @@ To view and edit the application, simply import the project into Eclipse.  If yo
 
 ### Download the Source Code ###
 
-Once you have Eclipse running, you can Import the WAR file as a new project via (this does not give access to the source code, as it is already compiled into the war.)
+Once you have Eclipse running, you can Import the WAR file as a new project via
   1. File->Import...
   2. Scroll down to the "Web" section, expand that section and click WAR File then click Next.
   3. Deselect the 'Add project to an EAR' checkbox
   4. Click next and then Finish and the project should be imported into Eclipse
-
-If you would like to edit the source code of the project, you will have to clone the git URL.
-
-  1. Open Eclipse
-  2. Select File->Import
-  3. Under the header labeled "Git", click "Projects from Git" and click `Next`
-  4. Select `Clone URI` and click `Next`
-  5. Copy paste the git clone URL into the next page. Hit `Next`
-  6. Select the Branch to clone (you should only need Master). Click `Next`
-  7. Name the destination directory. click `Next`
-  8. Check `Import Existing Projects` and click `Next`
-  9. Check the project, and click `Finish`
 
 ### Modify the Source Code and Deploy to Bluemix ###
 
