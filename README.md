@@ -11,12 +11,6 @@ Simply upload a line-separated file of text (e.g. tweets), and it will add each 
 This tutorial is intended to deploy a pre-compiled warfile through the command line. If you would like to
 use Eclipse and modify the source code, see [development](#development).
 
-Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
-
-[![Deploy to Bluemix](images/deploy-button.png)](https://hub.jazz.net/code/cfui/bluemix/deploy.html?Repository=https://github.com/ibmjstart/bluemix-java-postgresql-uploader.git)
-
-Note it will take a minute or so to start up.
-
 ## Prerequisites ##
 
 Before we begin, we first need to install the [**cf**](https://github.com/cloudfoundry/cli/releases) command line tool that will be used to upload and manage your application. If you've previously installed an older version of the cf tool, make sure you are now using v6 of cf by passing it the -v flag:

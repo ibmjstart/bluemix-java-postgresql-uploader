@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="PostgreSQLUpload">
-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+    <wb-module deploy-name="TwitterSearch0">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="PostgreSQLUpload"/>
-        <property name="java-output-path" value="/PostgreSQLUpload/build/classes"/>
+        <property name="java-output-path" value="/TwitterSearch0/bin"/>
+        <property name="context-root" value="elephantsql"/>
     </wb-module>
 </project-modules>
