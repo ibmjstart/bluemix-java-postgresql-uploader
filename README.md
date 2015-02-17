@@ -13,7 +13,7 @@ use Eclipse and modify the source code, see [development](#development).
 
 Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
 
-[![Deploy to Bluemix](images/deploy-button.png)](https://hub.jazz.net/code/cfui/bluemix/deploy.html?Repository=https://github.com/ibmjstart/bluemix-java-postgresql-uploader.git)
+[![Deploy to Bluemix](images/deploy-button.png)](https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-java-postgresql-uploader.git)
 
 Note it will take a minute or so to start up.
 
