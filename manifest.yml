@@ -1,7 +1,7 @@
 ---
 declared-services:
   myElephant:
-    type: elephantsql
+    label: elephantsql
     plan: turtle
     
 applications:
