@@ -131,6 +131,21 @@ Make sure you are in the Java EE [perspective](http://help.eclipse.org/juno/inde
   7. Create and bind the elephantSQL service by selecting either an existing elephantSQL service or creating one by selecting the icon in the top right. Search for ElephantSQL, and you can bind the application through the plugin GUI.
   8. Hit `Next` and `Finish`. Your app should deploy to Bluemix and be available at the URL you gave it. This can be viewed in the ACE UI.
 
+## Demo ##
+
+Once you start your application, the landing page should look similar to that shown below:
+
+![image](images/psqlMain.png)
+
+You can browse and upload a new-line separated .txt file to add its contents to a the database (1 entry for each line of text):
+
+![image](images/psqlUpload.png)
+
+You can also delete contents from your database using the "Clear DB" button:
+
+![image](images/psqlDelete.png)
+
+
 ## License ##
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
