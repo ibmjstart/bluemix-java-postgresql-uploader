@@ -15,11 +15,17 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-java-postgresql-uploader.git)
 
+Once you land on the page from the link above, log into your Bluemix account and deploy your app. Once the app has finished deploying, you should have a screen that looks like this:
+
+![image](images/psqldeploy.png)
+
+Your app is now live on Bluemix! Click on "View Your App" to play around with it, and enjoy!
+
 Note it will take a minute or so to start up.
 
 ## Prerequisites ##
 
-Before we begin, we first need to install the [**cf**](https://github.com/cloudfoundry/cli/releases) command line tool that will be used to upload and manage your application. If you've previously installed an older version of the cf tool, make sure you are now using v6 of cf by passing it the -v flag:
+Before we begin, we first need to install the [**Bluemix Command Line Tool**] (http://clis.ng.bluemix.net/ui/home.html) as well as the [**CF Command Line Tool**](https://github.com/cloudfoundry/cli/releases) that will be used to upload and manage your application. If you've previously installed an older version of the cf tool, make sure you are now using cf v6 by passing it the -v flag:
 
     cf -v
 
@@ -64,7 +70,6 @@ with 'user1' then the example below would be hosted at http://jeu-user1.mybluemi
    | *example:* | `$ cf bind-service jeu-<YOUR-NAME> elephantsql_JEU`|
 
 5. Start the app
-
 
    | *usage:*   | `$ cf start APP`|
    |------------|:----------------|
